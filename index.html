@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Design & Creation — Professional graphic design, reel editing, websites and social media services by Mahesh.">
+<title>Design & Creation | Mahesh</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#07080b;--panel:#101217;--panel2:#151820;--text:#f6f7fb;--muted:#a6aab6;--accent:#b9ff39;--line:#242833}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:50;background:rgba(7,8,11,.86);backdrop-filter:blur(15px);border-bottom:1px solid var(--line)}
+.nav{height:70px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;font-weight:850}
+.logo{width:40px;height:40px;border-radius:12px;background:var(--accent);color:#080a08;display:grid;place-items:center;font-weight:950;font-size:19px}
+.navlinks{display:flex;gap:24px;color:#c4c7d0;font-size:14px}
+.navlinks a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 19px;border-radius:12px;background:var(--accent);color:#070907;font-weight:850;border:1px solid transparent;transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.dark{background:#15171c;border-color:#343844;color:#fff}
+.hero{min-height:680px;display:flex;align-items:center;position:relative;overflow:hidden;padding:90px 0}
+.hero:after{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-170px;top:-150px;background:var(--accent);opacity:.08;filter:blur(80px)}
+.eyebrow{color:var(--accent);font-size:12px;font-weight:900;letter-spacing:2.2px;text-transform:uppercase}
+h1{font-size:clamp(48px,8vw,92px);line-height:.95;letter-spacing:-4px;margin:17px 0 25px;max-width:930px}
+h1 span{color:var(--accent)}
+.hero p{font-size:18px;color:var(--muted);max-width:680px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.proof{display:flex;gap:26px;flex-wrap:wrap;margin-top:35px;color:#c7cad2;font-size:13px}
+.proof b{color:#fff}
+section{padding:85px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:32px}
+h2{font-size:42px;line-height:1.05;letter-spacing:-1.5px}
+.section-head p{max-width:500px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:27px;transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:#404551}
+.icon{font-size:30px;margin-bottom:14px}
+.card h3{font-size:20px;margin-bottom:7px}.card p{font-size:14px;color:var(--muted)}
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.price{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:26px}
+.price strong{display:block;color:var(--accent);font-size:27px;margin:8px 0}
+.price span{font-size:13px;color:var(--muted)}
+.price p{color:#c8cad1;font-size:14px;margin:8px 0 18px}
+.portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.work{height:245px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,#1b1e25,#0d0f13);position:relative;overflow:hidden;padding:23px;display:flex;align-items:end}
+.work:before{content:"";position:absolute;width:190px;height:190px;border-radius:50%;right:-65px;top:-60px;background:var(--accent);opacity:.12}
+.work:after{content:"SAMPLE";position:absolute;right:18px;top:18px;color:#777;font-size:10px;letter-spacing:2px}
+.work .txt{position:relative;z-index:2}.work small{color:var(--accent);font-weight:850}.work h3{margin-top:4px}
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:20px}
+.about-card{background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:34px}
+.about-card p{color:var(--muted);margin-top:13px}
+.highlight{border-radius:28px;background:var(--accent);color:#080a07;padding:55px}
+.highlight .eyebrow{color:#101300}.highlight h2{max-width:720px}.highlight p{max-width:650px;margin:13px 0 25px}
+.highlight .btn{background:#070807;color:#fff}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.contact-card{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:32px}
+.contact-card p{color:var(--muted);margin:9px 0 20px}
+.contact-info{display:grid;gap:10px;color:#ddd;font-size:14px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:#777;font-size:13px}
+footer .foot{display:flex;justify-content:space-between;gap:20px}
+@media(max-width:800px){
+.navlinks{display:none}.hero{padding:75px 0;min-height:auto}h1{letter-spacing:-2.5px}
+.grid,.prices,.portfolio,.contact,.about{grid-template-columns:1fr}
+.section-head{display:block}.section-head p{margin-top:12px}
+.highlight{padding:35px 25px}footer .foot{display:block}
+footer .foot span{display:block;margin-top:6px}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="container nav">
+<a href="#" class="brand"><span class="logo">D</span><span>Design & Creation</span></a>
+<div class="navlinks"><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+<a class="btn" href="#contact">Let's Talk</a>
+</div></nav>
+
+<header class="hero"><div class="container">
+<div class="eyebrow">Design • Edit • Build • Grow</div>
+<h1>Turn your ideas into <span>something people notice.</span></h1>
+<p>Professional graphic design, reel editing, websites and social media solutions for businesses and creators. Clean work, practical pricing and a focus on making your brand look better online.</p>
+<div class="actions">
+<a class="btn" href="#work">View My Work →</a>
+<a class="btn dark" href="#contact">Get a Free Sample</a>
+</div>
+<div class="proof">
+<span>✓ <b>Custom Designs</b></span>
+<span>✓ <b>Budget Friendly</b></span>
+<span>✓ <b>Fast Communication</b></span>
+<span>✓ <b>Fiverr Experience</b></span>
+</div>
+</div></header>
+
+<section id="services"><div class="container">
+<div class="section-head"><h2>Services that help your business stand out.</h2><p>From one promotional poster to a complete online presence, choose exactly what your business needs.</p></div>
+<div class="grid">
+<div class="card"><div class="icon">🎨</div><h3>Poster Design</h3><p>Offer posters, event creatives, menus, announcements and promotional designs.</p></div>
+<div class="card"><div class="icon">🖼️</div><h3>Banner Design</h3><p>Professional banners for shops, events, social media and online promotions.</p></div>
+<div class="card"><div class="icon">🎬</div><h3>Reel Editing</h3><p>Short-form videos with clean cuts, captions, transitions, music and engaging pacing.</p></div>
+<div class="card"><div class="icon">✨</div><h3>Logo Design</h3><p>Simple, memorable logo concepts designed around your business identity.</p></div>
+<div class="card"><div class="icon">🌐</div><h3>Website Design</h3><p>Modern, mobile-friendly websites that give customers a professional first impression.</p></div>
+<div class="card"><div class="icon">📱</div><h3>Social Media Management</h3><p>Creative posts and content support to keep your business active and consistent online.</p></div>
+</div></div></section>
+
+<section id="pricing"><div class="container">
+<div class="section-head"><h2>Simple starting prices.</h2><p>Affordable starting rates for local businesses. Final pricing depends on the project requirements.</p></div>
+<div class="prices">
+<div class="price"><h3>Poster Design</h3><strong>₹50–₹100</strong><span>per creative</span><p>Custom promotional poster with your text, photos and offer.</p><a class="btn dark" href="#contact">Get a Quote</a></div>
+<div class="price"><h3>Reel Editing</h3><strong>₹200–₹500</strong><span>per reel</span><p>Short-form editing with cuts, text, transitions and suitable pacing.</p><a class="btn dark" href="#contact">Get a Quote</a></div>
+<div class="price"><h3>Website</h3><strong>₹500–₹1,000+</strong><span>starting package</span><p>Simple business portfolio/landing website. Larger websites are quoted separately.</p><a class="btn dark" href="#contact">Get a Quote</a></div>
+</div></div></section>
+
+<section id="work"><div class="container">
+<div class="section-head"><h2>My Work</h2><p>Portfolio samples will be displayed here. Replace the sample cards with your real designs as you create them.</p></div>
+<div class="portfolio">
+<div class="work"><div class="txt"><small>01 • POSTER</small><h3>Business Offer Poster</h3></div></div>
+<div class="work"><div class="txt"><small>02 • BANNER</small><h3>Promotional Banner</h3></div></div>
+<div class="work"><div class="txt"><small>03 • REEL</small><h3>Instagram Reel Edit</h3></div></div>
+<div class="work"><div class="txt"><small>04 • LOGO</small><h3>Brand Identity Concept</h3></div></div>
+<div class="work"><div class="txt"><small>05 • WEBSITE</small><h3>Business Website</h3></div></div>
+<div class="work"><div class="txt"><small>06 • SOCIAL</small><h3>Social Media Creative</h3></div></div>
+</div></div></section>
+
+<section><div class="container"><div class="highlight">
+<div class="eyebrow">TRY BEFORE YOU HIRE</div>
+<h2>Not sure about my work? Get a Free Sample.</h2>
+<p>Send your business name, a few photos and what you want to promote. I can create a sample concept so you can see my design direction before deciding on paid work.</p>
+<a class="btn" href="#contact">Request Your Free Sample →</a>
+</div></div></section>
+
+<section id="about"><div class="container about">
+<div><div class="eyebrow">About Me</div><h2>Creative work with a business-first mindset.</h2></div>
+<div class="about-card">
+<h3>Mahesh — Video Editor & Graphic Designer</h3>
+<p>I am a professional video editor, reel editor and graphic designer focused on creating clean, engaging and useful digital content.</p>
+<p>I work on Fiverr and also provide services directly to businesses and creators. My goal is simple: understand what you need, create it professionally, and make your online presence stronger.</p>
+</div>
+</div></section>
+
+<section id="contact"><div class="container">
+<div class="section-head"><h2>Have a project in mind?</h2><p>Tell me what you need. You can message me directly for a quote or request a free sample.</p></div>
+<div class="contact">
+<div class="contact-card">
+<h3>📲 WhatsApp</h3><p>Fastest way to discuss your project.</p>
+<div class="contact-info"><div>+91 98281 39729</div><div>Available for design & editing work</div></div>
+<br><a class="btn" id="whatsapp" href="#">Chat on WhatsApp →</a>
+</div>
+<div class="contact-card">
+<h3>✉️ Email</h3><p>For project details, files and business enquiries.</p>
+<div class="contact-info"><div>maheshdesign123@gmail.com</div></div>
+<br><a class="btn dark" href="mailto:maheshdesign123@gmail.com">Send an Email →</a>
+</div>
+</div>
+</div></section>
+
+<footer><div class="container foot">
+<span>© 2026 Design & Creation — Mahesh</span>
+<span>Professional Design • Video Editing • Websites</span>
+</div></footer>
+
+<script>
+const number="919828139729";
+const message=encodeURIComponent("Hello Mahesh, I visited your Design & Creation website. I want to discuss a project and would like to know about your services.");
+document.getElementById("whatsapp").href="https://wa.me/"+number+"?text="+message;
+</script>
+</body>
+</html>
